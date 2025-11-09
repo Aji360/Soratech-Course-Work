@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soratech Signin</title>
+    <link rel="stylesheet" href="auth.css">
+    
+</head>
+<body>
+    <header>
+
+    </header>
+    <main id="main-section">
+        <div id='auth-container' class='login-page'>
+            
+            <div class='form-box'>
+                <!-- <h3>Create or Sign into your account</h3> -->
+                <div class='toggle-button-box'>
+                    
+                    <!-- Empty Div for toggle button movement -->
+                    <div id='button'></div> 
+                    <button type='button' onclick='login()' class='toggle-button'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-button'>Register</button>
+                </div>
+                <!-- Login form -->
+                <form id='login' class='input-group-login' autocomplete="on">
+                    <h3>Welcome Back!</h3>
+                    <label for="email">Email Address *</label>
+                    <!-- Input Attributes Collapsed to improve readability -->
+                    <input 
+                        type='email' 
+                        class='input-field' 
+                        placeholder='Enter Email Address' 
+                        autocomplete="email"
+                        data-validate="email" 
+                        maxlength="254"
+                     required >
+                    <label for="password">Password *</label>
+                    <input 
+                        type='password' 
+                        class='input-field' 
+                        placeholder='Enter Password' 
+                        autocomplete="current-password" 
+                        data-validate="password"
+                        minlength="8" 
+                        data-validate="password" 
+                    required>
+                    <a href='password_reset.html'>Forgot Password?</a>
+                    <p>Don't have an account? <a href='password_reset.html'>Register Here</a></p>
+                    <button type='submit' class='submit-button'>Log in</button>
+                </form>
+
+                <!-- Register form -->
+                <form id='register' class='input-group-register' autocomplete="on">
+                    <label for="first_name">First Name *</label>
+                    <input 
+                        type='text' 
+                        class='input-field' 
+                        placeholder='First Name' 
+                        autocomplete="given-name"  
+                        minlength="2" 
+                        maxlength="100" 
+                    required>
+                    <label for="last_name">Last Name *</label>
+                    <input 
+                        type='text' 
+                        class='input-field' 
+                        placeholder='Last Name ' 
+                        autocomplete="family-name" 
+                        minlength="2" 
+                        maxlength="100" 
+                    required>
+                    <label for="email">Email *</label>
+                    <input 
+                        type='email' 
+                        class='input-field' 
+                        placeholder='Enter Email Address' 
+                        autocomplete="email" 
+                        maxlength="254" 
+                        required>
+                    <label for="phone_number">Phone Number</label>
+                    <input 
+                        type='tel' 
+                        class='input-field' 
+                        placeholder='Phone Number' 
+                        autocomplete="tel">
+                    <label for="Password">Password *</label>
+                    <input 
+                        type='password' 
+                        class='input-field' 
+                        placeholder='Enter Password' 
+                        autocomplete="new-password" 
+                        minlength="8" 
+                        maxlength="100"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]"  
+                        required>
+                    <label for="Confirm_password">Confirm Password *</label>
+                    <input 
+                        type='password' 
+                        class='input-field' 
+                        placeholder='Confirm Password' 
+                        autocomplete="new-password" 
+                        minlength="8" 
+                        maxlength="100" 
+                    required>
+                    
+                    <br>
+
+                    <p>Choose your role:</p>
+                    <input type="radio" id="Student" name="role" value="Student">
+                    <label for="Student">Student</label><br>
+                    <input type="radio" id="Employer" name="role" value="Employer">
+                    <label for="Employer">Employer</label><br>
+                    <input type="radio" id="Admin" name="role" value="Admin">
+                    <label for="Admin">Admin</label><br>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and agreement                                                  conditions</span>
+                    <button type='submit' class='submit-button'>Register</button>
+                </form>
+            </div>
+            <!-- <img src="images/login_background.jpg" alt="image_of_interns_connecting" class="bg_image" loading="lazy"> -->
+        </div>
+    </main>
+       
+    <script src="auth.js"></script>
+</body>
+</html>
